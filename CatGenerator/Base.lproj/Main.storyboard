@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cat Generate View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CatGenerateViewController" customModule="CatGenerator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="440" height="956"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Генератор котов" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbg-U0-7Ph">
+                                <rect key="frame" x="20" y="107" width="400" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="S4P-Jp-t4m" userLabel="catImageView">
+                                <rect key="frame" x="20" y="138" width="400" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="S4P-Jp-t4m" secondAttribute="height" multiplier="2:3" id="BtF-3O-Iwp"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPu-Mg-Cuk">
+                                <rect key="frame" x="20" y="802" width="400" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сгенерируй котика"/>
+                                <connections>
+                                    <action selector="catButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="edB-vu-efx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jbg-U0-7Ph" secondAttribute="trailing" constant="20" id="0bl-0S-hlE"/>
+                            <constraint firstItem="jbg-U0-7Ph" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="HPm-cE-zdy"/>
+                            <constraint firstItem="S4P-Jp-t4m" firstAttribute="top" secondItem="jbg-U0-7Ph" secondAttribute="bottom" constant="10" id="Is8-ft-gN5"/>
+                            <constraint firstItem="S4P-Jp-t4m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XgK-Nl-W7W"/>
+                            <constraint firstItem="jbg-U0-7Ph" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bbS-mI-iC8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aPu-Mg-Cuk" secondAttribute="trailing" constant="20" id="gtI-Ko-HzM"/>
+                            <constraint firstItem="aPu-Mg-Cuk" firstAttribute="top" secondItem="S4P-Jp-t4m" secondAttribute="bottom" constant="64" id="ko3-8H-NC7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="S4P-Jp-t4m" secondAttribute="trailing" constant="20" id="npX-RN-MiQ"/>
+                            <constraint firstItem="aPu-Mg-Cuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tYZ-mO-kGN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="catImageView" destination="S4P-Jp-t4m" id="D5c-0Q-y7E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6" y="-2"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat1" width="640" height="639.66668701171875"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
